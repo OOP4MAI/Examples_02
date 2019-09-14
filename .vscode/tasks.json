@@ -1,0 +1,105 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "cmake",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "..\\"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/CMakeFiles"
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": "$go"
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                ".",
+                "--config",
+                "Debug",
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/CMakeFiles"
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": "$go"
+        },
+        {
+            "label": "run_malloc",
+            "type": "shell",
+            "command": "CMakeFiles/malloc",
+            "group": "test",
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "run_square",
+            "type": "shell",
+            "command": "CMakeFiles/square",
+            "group": "test",
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "run_stackoverflow",
+            "type": "shell",
+            "command": "CMakeFiles/stackoverflow",
+            "group": "test",
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "run_stream",
+            "type": "shell",
+            "command": "CMakeFiles/stream",
+            "group": "test",
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "run_first_class",
+            "type": "shell",
+            "command": "CMakeFiles/first_class",
+            "group": "test",
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "run_second_class",
+            "type": "shell",
+            "command": "CMakeFiles/second_class",
+            "group": "test",
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "run_life",
+            "type": "shell",
+            "command": "CMakeFiles/life",
+            "group": "test",
+            "presentation": {
+                "reveal": "always"
+            }
+        }
+    ]
+}
